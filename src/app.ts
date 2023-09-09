@@ -3,7 +3,7 @@ require('../src/mongoose');
 var cors = require('cors')
 
 export const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 app.use(cors())
 
 const movieRouter = require('./routes/movies');
